@@ -108,15 +108,18 @@ public class MSButton
     // called by manager
     
     public void mousePressed () 
-    {clicked = true;
+    {
         if(mouseButton==RIGHT)
         marked=!marked;
         else if(mouseButton==LEFT&&bombs.contains(this)){
+          clicked = true;
         displayLosingMessage();}
         else if(countBombs(r,c)>0){
+          clicked = true;
         label=""+countBombs(r,c);
         }
         else{
+          clicked = true;
           for(int i=-1; i<2;i++)
                 {
                     for(int j=-1; j<2;j++)
